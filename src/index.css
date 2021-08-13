@@ -22,7 +22,29 @@ code {
     monospace;
 }
 
-.section-home {
+#loading {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+#header {
+  /* background-color: #f5f5f5; */
+  height: 90px;
+  position: fixed;
+  top: 0;
+  width: 1000vh;
+  z-index: 2;
+}
+
+#section-home {
   background-image: url('./img/background-code.jpg');
   background-position: center center;
   background-size: cover;
@@ -43,5 +65,29 @@ code {
 }
 
 .my-name {
+  font-family:  kanit, arial, sans-serif;
   font-size: 3.6rem;
+  font-weight: 100;
+}
+
+.my-role {
+  font-family:  kanit, arial, sans-serif;
+  font-size: 1.7rem;
+  font-weight: 100;
+}
+
+#section-about {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#section-profile, #section-aboutText {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#picture-about {
+  border-radius: 100%;
 }

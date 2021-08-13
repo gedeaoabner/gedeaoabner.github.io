@@ -4,15 +4,16 @@ class Home extends React.Component {
   render() {
     return (
       <section
-        className="section-home"
+        id="section-home"
+        className="container-center"
       >
         <section className="center-home container-lg">
           <span className="my-name">
-            Gedeão Abner Dos Santos
+            GEDEÃO ABNER DOS SANTOS
           </span>
           <hr />
           <span className="my-role">
-            Programador
+            Desenvolvedor web
           </span>
         </section>
       </section>

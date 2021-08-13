@@ -1,27 +1,59 @@
 import React from 'react';
 import Home from './pages/Home';
+import Loading from './pages/Loading';
+import About from './pages/About';
 import './App.css';
 
 class App extends React.Component {
-  render() {
+  constructor() {
+    super();
+
+    this.state = {
+      loading: true,
+    }
+
+    this.loading = this.loading.bind(this);
+    this.page = this.page.bind(this);
+    this.loadAll = this.loadAll.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      loading: false,
+    })
+  }
+
+  loading() {
     return (
-      <div className="App">
-        <header className="section-header">
-          {/* <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-            
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a> */}
+      <>
+        <Loading />
+      </>
+    );
+  }
+
+  page() {
+    return (
+      <>
+        <header id="header">
+          a
         </header>
         <Home />
+        <About />
+      </>
+    );
+  }
+
+  loadAll() {
+    this.loading();
+  }
+
+  render() {
+    const { loading } = this.state;
+    return (
+      <div className="App">
+        { loading && this.loading() }
+        { loading && this.page() }
+        { !loading && this.page() }
       </div>
     );
   }
